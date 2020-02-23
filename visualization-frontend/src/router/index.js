@@ -12,14 +12,14 @@ const routes = [
     component: Home
   },
   {
-    path: "/geoip",
+    path: "/ip",
     name: "GeoIp",
     component: GeoIp
   }
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "abstract",
   base: process.env.BASE_URL,
   routes
 });

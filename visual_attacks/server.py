@@ -23,7 +23,7 @@ routes = [
     Route('/api', GraphQLApp(schema=schema, graphiql=True)),
     Route('/geoip', geoip, methods=["POST"]),
     Mount('/', app=StaticFiles(directory='visualization-frontend/dist',
-                               html=True), name='static'),
+                               html=True)),
 ]
 
 app = Starlette(routes=routes)

@@ -10,7 +10,6 @@ function getIps(map) {
             return edge.node;
         });
         let ip_info = data.reduce((acc, curr) => {
-            console.log(curr);
             const credentials = curr.credentials.edges.map(edge => edge.node);
             if (!acc.hasOwnProperty(curr.sourceIp)) {
                 acc[curr.sourceIp] = { "credentials": [] };
@@ -21,13 +20,11 @@ function getIps(map) {
 
         let ips = Object.keys(ip_info);
 
-        console.log(ips)
         const xhr2 = new XMLHttpRequest();
         const serverUrl = '/geoip';
         xhr2.open('POST', serverUrl);
         xhr2.setRequestHeader('Content-Type', 'application/json');
         xhr2.onload = function () {
-            let features = [];
             JSON.parse(xhr2.response).forEach((latlon, idx) => {
                 const ip = ips[idx];
                 let marker = new google.maps.Marker({
@@ -55,7 +52,6 @@ function getIps(map) {
                     info_window.open(map, marker);
                 });
             });
-            console.log(features);
         };
         xhr2.send(JSON.stringify(ips));
     };
