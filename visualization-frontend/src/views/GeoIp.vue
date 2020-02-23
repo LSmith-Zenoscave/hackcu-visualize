@@ -1,5 +1,6 @@
 <template>
   <div class="geoip">
+    Click on a point to view credentials attempted by that ip at that location.
     <div id="map" />
   </div>
 </template>
