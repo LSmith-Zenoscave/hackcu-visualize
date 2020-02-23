@@ -1,1 +1,1 @@
-server: /opt/app/env/bin/gunicorn -b 0.0.0.0:8080 visual_attacks.server:app
+server: /opt/app/env/bin/uvicorn --host 0.0.0.0 --port 8080 visual_attacks.server:app
