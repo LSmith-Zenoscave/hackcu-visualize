@@ -1,0 +1,5 @@
+sqlalchemy
+graphene
+graphene_sqlalchemy
+starlette
+uvicorn
