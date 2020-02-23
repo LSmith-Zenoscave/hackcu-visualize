@@ -4,3 +4,4 @@ graphene_sqlalchemy
 starlette
 uvicorn
 honcho
+maxminddb-geolite2
