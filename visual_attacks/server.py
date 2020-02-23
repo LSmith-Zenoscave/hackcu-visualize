@@ -6,7 +6,7 @@ import graphene
 from visual_attacks.schema import schema
 
 routes = [
-    Route('/', GraphQLApp(schema=schema))
+    Route('/', GraphQLApp(schema=schema, graphiql=False))
 ]
 
 app = Starlette(routes=routes)
