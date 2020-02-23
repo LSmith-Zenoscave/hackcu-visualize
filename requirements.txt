@@ -5,3 +5,4 @@ starlette
 uvicorn
 honcho
 maxminddb-geolite2
+aiofiles
